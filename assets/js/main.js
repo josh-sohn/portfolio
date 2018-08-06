@@ -92,7 +92,7 @@ NOTE: This is the custom jQuery file for the template
 
         $(function() {
             element.typed({
-                strings: ["Web Designer.", "Graphic Designer.", "Freelancer."],
+                strings: ["Gamer.", "sohnOfGod", "Web Developer."],
                 typeSpeed: 100,
                 loop: true,
             });
