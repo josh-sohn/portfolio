@@ -1,6 +1,48 @@
 <?php
 require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
+
+$output = [
+    'success' => null,
+    'messages' => []
+];
+// //Sanitize Name Field
+$message['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+if(empty($message['name'])){
+    $output['success'] = false;
+    $output['message'][] = 'missing name key';
+}
+// //VALIDATE email field
+$message['email'] = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+if(empty($message['email'])){
+    $output['success'] = false;
+    $output['message'][] = 'missing email key';
+}
+// //SANITIZE MESSAGE
+$message['message'] = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+if(empty($message['message'])){
+    $output['success'] = false;
+    $output['message'][] = 'missing message key';
+}
+// //sanitize subject
+$message['subject'] = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+if(empty($message['subject'])){
+    $output['success'] = false;
+    $output['message'][] = 'missing subject key';
+}
+// //sanitize phone
+/*$message['phone'] = preg_replace('/[^0-9]/', '', $_POST['phone_number']);
+if(empty($message['phone']) && count($message['phone']) >= 10 && count($message['phone']) <= 11){
+    $output['success'] = false;
+    $output['message'][] = 'missing email key';
+}*/
+
+if($output['success'] !== null){
+    http_response_code(422);
+    echo json_encode($output);
+    exit();
+}
+
 $mail = new PHPMailer;
 $mail->SMTPDebug = 3;           // Enable verbose debug output. Change to 0 to disable debugging output.
 
@@ -21,32 +63,33 @@ $options = array(
     )
 );
 $mail->smtpConnect($options);
-$mail->From = 'servermailersmurf@gmail.com';  // sender's email address (shows in "From" field)
-$mail->FromName = 'josh test';   // sender's name (shows in "From" field)
-$mail->addAddress('jsohn000@gmail.com', 'test123');  // Add a recipient
+$mail->From = EMAIL_USER;  // sender's email address (shows in "From" field)
+$mail->FromName = EMAIL_USERNAME;   // sender's name (shows in "From" field)
+$mail->addAddress(EMAIL_TO_ADDRESS, EMAIL_USERNAME);  // Add a recipient
 //$mail->addAddress('ellen@example.com');                        // Name is optional
-$mail->addReplyTo($_POST['email']);                          // Add a reply-to address
+$mail->addReplyTo($message['email'],$message['name']);                          // Add a reply-to address
+
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'mailer message from '.$_POST['name'];
-$mail->Body    = "
-    name: {$_POST['name']}<br>
-    email: {$_POST['email']}<br>
-    subject: {$_POST['subject']}<br>
+$mail->Subject = $message['subject'];
 
-";
+$message['message'] = nl2br($message['message']);
+$mail->Body    = $message['message'];
+$mail->AltBody = htmlentities($message['message']);
 
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    $output['success'] = false;
+    $output['messages'][]= $mail->ErrorInfo;
 } else {
-    echo 'Message has been sent';
+    $output['success'] = true;
 }
+
+echo json_encode($output);
 ?>
