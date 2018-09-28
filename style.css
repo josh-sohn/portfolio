@@ -187,7 +187,6 @@ a{
 	font-weight: 700;
 	letter-spacing: 3px;
 	margin-top: 21px;
-	text-transform: uppercase;
 	-webkit-transition: all 0.4s ease-in-out 0s;
 	transition: all 0.4s ease-in-out 0s;
 	line-height: 40px;
@@ -700,115 +699,6 @@ a{
      
  }
 
- /*===============================================
-	    8. STAT AREA
-===============================================*/
- 
- .stat-area {
-     color: #222;
-     background-color: #f7f7f7;
- }
- .stat-border {
-     border-right: 1px dashed #fff;
- }
- .stat-border:last-child {
-     border-right: 0px dashed;
- }
- .single-stat {
-     text-align: center;
- }
- .single-stat i.fa {
-     font-size: 30px;
- }
- .single-stat h2 {
-     font-size: 55px;
-     margin-bottom: 5px;
-     margin-top: 20px;
-     font-weight: 900;
- }
- .single-stat h3 {
-     font-size: 14px;
-     font-weight: 400;
-     text-transform: uppercase;
-     color: #444;
-     margin: 0;
- }
-
- /*================================================
-            9 TESTIMONIAL AREA 
-==================================================*/
- 
-  .testimonial-area {} .single-testimonial {
-     position: relative;
-     background-color: #fff;
-     padding: 40px 20px 25px;
-     border: 1px solid #ddd;
- }
-.testimonial-list.owl-carousel .owl-stage-outer {
-	padding-top: 20px;
-}
-
-.quote-mark {
-	position: absolute;
-	left: 14px;
-	top: 0;
-	width: 38px;
-	height: 38px;
-	color: #fff;
-	border-radius: 50%;
-	font-size: 18px;
-	text-align: center;
-	line-height: 38px;
-	transform: translateY(-50%);
-    background: #222;
-}
-.testimonial-list.owl-carousel .owl-item.active .quote-mark{
-    
-}
- .t-image {
-     height: 70px;
-     left: 20px;
-     position: absolute;
-     right: 0;
-     width: 70px;
- }
- .t-name {
-     padding: 13px 0;
- }
- .t-image img {
-     border-radius: 50%;
-     width: 100%;
- }
- .t-author h4 {
-     margin: 0;
-     font-size: 15px;
-     text-transform: uppercase;
-     font-weight: 600;
- }
-.t-author h4 span{
-    display: block;
-    margin-top: 5px;
-    font-size: 13px;
-    font-weight: 400;
-}
- .t-content {
-     margin-bottom: 30px;
-     font-size: 15px;
- }
- .t-author {
-     padding-left: 85px;
- }
- .testimonial-area .owl-dots {
-     margin-top: 35px;
-     text-align: center;
- }
- .testimonial-area .owl-dots div {
-     background: #222 none repeat scroll 0 0;
-     display: inline-block;
-     height: 5px;
-     margin-left: 5px;
-     width: 25px;
- }
 
  /*================================================
             10 CONTACT INFO SECTION
@@ -887,8 +777,14 @@ a{
      background-color: #222;
      padding: 20px 0;
  }
- .footer p {
-     font-size: 16px;
+ .footer span {
+     font-size: 18px;
      color: #fff;
-     margin: 0px;
+     margin: 15px;
+ }
+
+ .footer a {
+     font-size: 35px;
+     margin: 15px;
+
  }
