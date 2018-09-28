@@ -93,6 +93,7 @@ NOTE: This is the custom jQuery file for the template
         $(function() {
             element.typed({
                 strings: ["Developer.", "Database Administrator.", "Gamer."],
+
                 typeSpeed: 100,
                 loop: true,
             });
