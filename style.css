@@ -503,24 +503,29 @@ a{
  a.btn.extra:hover {}
 
  /*================================================
-            6 SERVICES AREA
+            6 SKILLS AREA
 ==================================================*/
- 
+/* .row-skills{
+     display: flex;
+     flex-wrap: wrap;
+     margin: 0 auto;
+     justify-content: space-between;
+ }*/
 .services-area{
     background-color: #f7f7f7;
 }
  .single-service {
      position: relative;
      overflow: hidden;
-     font-size: 15px;
-     font-weight: 300;
-     padding: 40px 30px;
+     padding: 10px 10px;
      background-color: #fff;
-     margin-bottom: 30px;
-     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-     -webkit-transition: 0.4s;
-     transition: 0.4s;
+     margin: 10px;
+     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+     height: 125px;
+     width: 125px;
  }
+
+/*
 .single-service::before {
 	position: absolute;
 	content: "";
@@ -549,26 +554,7 @@ a{
 .single-service:hover::after {
 	right: 0;
 }
-.single-service:hover{
-    
-}
- .service-img {
-     height: 65px;
-     width: 60px;
-     background-size: contain;
-     margin: 0 auto;
-     background-repeat: no-repeat;
- }
- .single-service h3 {
-     font-size: 18px;
-     font-weight: 400;
-     margin: 15px 0 20px;
-     text-transform: capitalize;
- }
- .single-service p {
-     margin: 0;
- }
- .single-service:hover {}
+*/
 
  /*================================================
             7 WORK AREA
