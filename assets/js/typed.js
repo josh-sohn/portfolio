@@ -22,7 +22,6 @@
 
 
 
-
 ! function($) {
 
 	"use strict";
