@@ -1,14 +1,3 @@
-/*=========================================
-
-Template Name: pixie - Personal Portfolio Template
-Author: mhbthemes
-Version: 1.0
-Design and Developed by: mhbthemes
-
-NOTE: This is the custom jQuery file for the template
-
-=========================================*/
-
 
 (function ($) {
 	"use strict";
