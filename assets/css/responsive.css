@@ -179,6 +179,12 @@
     .footer {} .footer-text P {
         font-size: 14px;
     }
+    .single-service{
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
 }
 /* Wide Mobile Layout: 480px. */
 
@@ -192,4 +198,19 @@
     .welcome-text::before,.welcome-text::after {
 	width: 15%;
 }
+    .single-service{
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .single-service{
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
 }

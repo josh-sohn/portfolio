@@ -53,6 +53,7 @@ a{
  html,
  body {
      height: 100%
+
  }
  body {
      font-family: 'Poppins', sans-serif;
@@ -129,6 +130,7 @@ a{
          -webkit-transform: scaleY(1.0)
      }
  }
+
  @keyframes sk-stretchdelay {
      0%, 40%, 100% {
          transform: scaleY(0.4);
@@ -237,10 +239,12 @@ a{
  
  .welcome-area {
      background-size: cover;
-     z-index: 1;
+     z-index: 0.5;
      position: relative;
      height: 100%;
+     background-position: center;
  }
+
  .welcome-area:after,
  .quotes-area:after {
      position: absolute;
