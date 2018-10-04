@@ -295,16 +295,16 @@
                     <div class="row-work">
                         <div class="col-md-4 col-sm-6 col-xs-12 mix">
                             <div class="single-work">
-                                <img src="assets/img/work/1.jpg" alt="">
+                                <img src="assets/img/work/concert/1.jpg" alt="">
                                 <div class="item-hover">
                                     <div class="work-table">
                                         <div class="work-tablecell">
                                             <div class="hover-content">
                                                 <h4>Meals For Me</h4>
                                                 <p>Input ingredients to find a recipe that uses those specified ingredients.</p>
-                                                <a class="work-popup" href="assets/img/work/1.jpg"><i class="fa fa-play-circle"></i></a>
-                                                <a class="work-link" href="https://mealsforme.app" target="_blank"><i class="fa fa-link"></i></a>
-                                                <a class="" href="https://github.com/Learning-Fuze/c618_what_to_food" target="_blank"><i class="fa fa-github"></i></a>
+                                                <a href=#mealsLightbox><button class="fa fa-play-circle"></button></a>
+                                                <a class="work-link" href="https://mealsforme.app" target="_blank"><button class="fa fa-link"></button></a>
+                                                <a class="" href="https://github.com/Learning-Fuze/c618_what_to_food" target="_blank"><button class="fa fa-github"></button></a>
 
                                             </div>
                                         </div>
@@ -321,9 +321,9 @@
                                             <div class="hover-content">
                                                 <h4>Concert Finder</h4>
                                                 <p>Specify a location and genre to find a concert!</p>
-                                                <a class="work-popup" href="assets/img/work/2.jpg"><i class="fa fa-play-circle"></i></a>
-                                                <a class="work-link" href="concertfinder"><i class="fa fa-link"></i></a>
-                                                <a class="" href="https://github.com/sohnofgod/concertfinder" target="_blank"><i class="fa fa-github"></i></a>
+                                                <a href="#concertLightbox"><button class="fa fa-play-circle"></button></a>
+                                                <a class="work-link" href="concertfinder"><button class="fa fa-link"></button></a>
+                                                <a class="" href="https://github.com/sohnofgod/concertfinder" target="_blank"><button class="fa fa-github"></button></a>
 
                                             </div>
                                         </div>
@@ -340,9 +340,9 @@
                                             <div class="hover-content">
                                                 <h4>Student Grade Table</h4>
                                                 <p>A great tool for teachers to keep track of their students' grades.</p>
-                                                <a class="work-popup" href="assets/img/work/2.jpg"><i class="fa fa-play-circle"></i></a>
-                                                <a class="work-link" href="sgt"><i class="fa fa-link"></i></a>
-                                                <a class="" href="https://github.com/sohnofgod/studentgradetable" target="_blank"><i class="fa fa-github"></i></a>
+                                                <a href=#sgtLightbox><button class="fa fa-play-circle"></button></a>
+                                                <a class="work-link" href="sgt"><button class="fa fa-link"></button></a>
+                                                <a class="" href="https://github.com/sohnofgod/studentgradetable" target="_blank"><button class="fa fa-github"></button></a>
 
                                             </div>
                                         </div>
@@ -460,6 +460,118 @@
         </footer>
         <!--====== END FOOTER AREA ======-->
 
+
+<!--
+        <!+++++++++++ Beginning of works modal area+++++++++++++!?>
+-->     // meals modal
+        <div class="container">
+            <div class="modal fade and carousel slide" id="mealsLightbox">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <ol class="carousel-indicators">
+                                <li data-target="#lightbox" data-slide-to="0" class="active"></li>
+                                <li data-target="#lightbox" data-slide-to="1"></li>
+                                <li data-target="#lightbox" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="http://placehold.it/900x500/777/" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img src="http://placehold.it/900x500/666/" alt="Second slide">
+                                </div>
+                                <div class="item">
+                                    <img src="http://placehold.it/900x500/555/" alt="Third slide">
+                                    <div class="carousel-caption"><p>even with captions...</p></div>
+                                </div>
+                            </div><!-- /.carousel-inner -->
+                            <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div><!-- /.modal-body -->
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div><!-- /.container -->
+        //concert modal
+        <div class="container">
+            <div class="modal fade and carousel slide" id="concertLightbox">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <ol class="carousel-indicators">
+                                <li data-target="#lightbox" data-slide-to="0" class="active"></li>
+                                <li data-target="#lightbox" data-slide-to="1"></li>
+                                <li data-target="#lightbox" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="http://placehold.it/900x500/777/" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img src="http://placehold.it/900x500/666/" alt="Second slide">
+                                </div>
+                                <div class="item">
+                                    <img src="http://placehold.it/900x500/555/" alt="Third slide">
+                                    <div class="carousel-caption"><p>even with captions...</p></div>
+                                </div>
+                            </div><!-- /.carousel-inner -->
+                            <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div><!-- /.modal-body -->
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div><!-- /.container -->
+        //SGT modal
+        <div class="container">
+            <div class="modal fade and carousel slide" id="sgtLightbox">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <ol class="carousel-indicators">
+                                <li data-target="#lightbox" data-slide-to="0" class="active"></li>
+                                <li data-target="#lightbox" data-slide-to="1"></li>
+                                <li data-target="#lightbox" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="http://placehold.it/900x500/777/" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img src="http://placehold.it/900x500/666/" alt="Second slide">
+                                </div>
+                                <div class="item">
+                                    <img src="http://placehold.it/900x500/555/" alt="Third slide">
+                                    <div class="carousel-caption"><p>even with captions...</p></div>
+                                </div>
+                            </div><!-- /.carousel-inner -->
+                            <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div><!-- /.modal-body -->
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div><!-- /.container -->
+
+
+
+
+<!--
+        <!+++++++++++++++++++++++ end of modal area ++++++++++++++++!?!>
+-->
 
         <!--== plugins js ==-->
         <script src="assets/js/plugins.js"></script>
