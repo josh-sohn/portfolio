@@ -5,6 +5,10 @@
     .about-text {
         padding: 10px 0;
     }
+    .modal-dialog{
+        width: 94%;
+        margin-top: 33%;
+    }
 }
 /* Tablet Layout: 768px. */
 
@@ -25,6 +29,17 @@
     }
     .single-stat {
         margin-bottom: 40px;
+    }
+    .modal-dialog{
+        width: 94%;
+        margin-top: 33%;
+    }
+    .single-service{
+        justify-content: space-between;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 }
 /* Mobile Layout lower than: 320px. */
@@ -185,6 +200,11 @@
         margin: 0 auto;
         margin-bottom: 15px;
     }
+    .modal-dialog{
+        height: 200%;
+        width: 94.5%;
+        margin-top: 45%;
+    }
 }
 /* Wide Mobile Layout: 480px. */
 
@@ -204,6 +224,10 @@
         margin: 0 auto;
         margin-bottom: 15px;
     }
+    .modal-dialog{
+        width: 94%;
+        margin-top: 33%;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -212,5 +236,9 @@
         height: 60px;
         margin: 0 auto;
         margin-bottom: 15px;
+    }
+    .modal-dialog{
+        width: 94.5%;
+        margin-top: 45%;
     }
 }
