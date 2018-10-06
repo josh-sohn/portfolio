@@ -239,11 +239,12 @@ a{
  
  .welcome-area {
      background-size: cover;
-     z-index: 0.5;
+     z-index: 0;
      position: relative;
      height: 100%;
-     background-position: center;
+     background-position: center bottom;
  }
+
 
  .welcome-area:after,
  .quotes-area:after {
@@ -406,13 +407,14 @@ a{
  
  .about-area {} .author-image {
      text-align: center;
+     margin-top: 15px;
  }
  .social-icon {
      margin-top: 10px;
      margin-left: -5px;
      text-align: center;
  }
- 
+
 .skill-button{
 	margin: 20px 0;
     padding: 0;
@@ -433,20 +435,20 @@ a{
  }
  .about-text h2 {
      font-size: 34px;
-     font-weight: 300;
+     font-weight: 400;
      margin-top: 0;
      text-transform: uppercase;
  }
  .about-text h4 {
-     font-size: 16px;
-     font-weight: 500;
+     font-size: 17px;
+     font-weight: 600;
      text-transform: uppercase;
  }
  .about-text p {
-     font-size: 14px;
+     font-size: 15px;
      color: #222;
      line-height: 28px;
-     font-weight: 300;
+     font-weight: 450;
  }
  .about-text span {
      font-weight: 700;

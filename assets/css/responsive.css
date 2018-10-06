@@ -9,6 +9,7 @@
         width: 94%;
         margin-top: 33%;
     }
+
 }
 /* Tablet Layout: 768px. */
 
@@ -40,6 +41,10 @@
         height: 150px;
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+    .author-image{
+        width: 400px;
+        height: auto;
     }
 }
 /* Mobile Layout lower than: 320px. */
