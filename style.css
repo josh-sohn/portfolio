@@ -603,7 +603,7 @@ a{
 }
 */
  .item-hover {
-     padding: 30px;
+     padding: 15px;
      height: 100%;
      left: 0;
      position: absolute;
@@ -654,7 +654,7 @@ a{
  .single-work:hover .hover-content {} .hover-content h4,
  .hover-content p {
      color: #fff;
-     margin: 0;
+     margin: 0 auto;
  }
  .hover-content h4 {
      margin-top: -10px;
