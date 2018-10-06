@@ -409,6 +409,13 @@ a{
      text-align: center;
      margin-top: 15px;
  }
+
+
+.author-image img{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
  .social-icon {
      margin-top: 10px;
      margin-left: -5px;
