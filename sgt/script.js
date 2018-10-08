@@ -318,7 +318,7 @@ function serverCall(crud){
       case "deleteStudent":
             dataPull={
             
-                  url:"http://localhost/studentGrade/php_sgt/data.php?action=delete",
+                  url:"php_sgt/data.php?action=delete",
                   method:'POST',
                   dataType:'json',
                   data:`api_key=ToxPuUbzst&student_id=${crud.deleteStudent.id}`,
@@ -330,7 +330,7 @@ function serverCall(crud){
 
       case "createStudent":
              dataPull={
-                  url:"http://localhost/studentGrade/php_sgt/data.php?action=insert",
+                  url:"php_sgt/data.php?action=insert",
                   method:'POST',
                   dataType:'json',
                   data:`api_key=ToxPuUbzst&name=${crud.newstudent.name}&course=${crud.newstudent.course}&grade=${crud.newstudent.grade}`,
@@ -343,7 +343,7 @@ function serverCall(crud){
       case "updateStudent":
       
             dataPull={
-            url:"http://localhost/studentGrade/php_sgt/data.php?action=update",
+            url:"php_sgt/data.php?action=update",
             method:'POST',
             dataType:'json',
             data:`api_key=ToxPuUbzst&name=${crud.name}&course=${crud.course}&grade=${crud.grade}&student_id=${crud.id}`,
@@ -357,7 +357,7 @@ function serverCall(crud){
       default :
     
              dataPull={
-                  url:"http://localhost/studentGrade/php_sgt/data.php?action=readAll",
+                  url:"php_sgt/data.php?action=readAll",
                   method:'POST',
                   dataType:'json',
                   data:"api_key=ToxPuUbzst",
@@ -482,7 +482,7 @@ function signupAjax(data){
 data.password="tHodAoaSpp"+data.password+"627846";
 $.ajax({
  
-      url : 'http://localhost/studentGrade/php_sgt/data.php?action=signUp',
+      url : 'php_sgt/data.php?action=signUp',
       type : 'POST',
       data : {
             'username' : data.username,
@@ -620,7 +620,7 @@ function loginAjax(data){
       data.password="tHodAoaSpp"+data.password+"627846";
       $.ajax({
       
-            url : 'http://localhost/studentGrade/php_sgt/data.php?action=login',
+            url : 'php_sgt/data.php?action=login',
             type : 'POST',
             data : {
                   'email':data.email,

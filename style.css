@@ -509,12 +509,12 @@ a{
  /*================================================
             6 SKILLS AREA
 ==================================================*/
-/* .row-skills{
+ .row-skills{
      display: flex;
      flex-wrap: wrap;
      margin: 0 auto;
      justify-content: center;
- }*/
+ }
 .services-area{
     background-color: #f7f7f7;
 }
