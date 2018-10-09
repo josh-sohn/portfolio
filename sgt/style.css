@@ -2,6 +2,10 @@ td {
     word-break:break-all;
 }
 
+.btn{
+    margin: 2px;
+}
+
 @media all and (max-width: 475px) {
     td {
         font-size: 13px;
