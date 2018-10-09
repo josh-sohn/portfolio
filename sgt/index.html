@@ -1,205 +1,69 @@
 <!doctype html>
 <html>
 <head>
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="animate.css">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="script.js"></script>
-    <meta name="viewport" content="initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Student Grade Table</title>
 </head>
 <body>
-<div class="loginModal hide">
-        
-        <div class="loginPopUP login-form">
-            
-        <div class="main-div">
-            <div class="cancel"><button><i class="fas fa-times"></i></button></div>
-            <div class="panel">
-            <h2>Login</h2>
-            <p>Please enter your email and password</p>
-            </div>
-            <form id="Login">
-        
-                <div class="form-group">
-                     <label for="inputEmail">Email <span class="inputEmailError"></span></label>
-                    <input type="email" class="form-control inputEmail" id="inputEmail" placeholder="Email Address">
-                </div>
-        
-                <div class="form-group">
-                        <label for="inputPassword">Password <span class="inputPassError"></span></label>
-                    <input type="password" class="form-control inputPassword" id="inputPassword" placeholder="Password">
-        
-                </div>
-                <div class="forgot">
-                <a href="reset.html">Forgot password?</a>
-        </div>
-                <button type="button" class="btn btn-primary loginEnter">Enter</button>
-        
-            </form>
-            </div>
-        
-        </div></div>
-        
-<div class="signup-form hide ">
-    <div class="signupPopUp form-container">
-        <form class="form-container">
-            <div class="cancelSignUp"><i class="fas fa-times"></i></div>
-            <h2>Sign Up</h2>
-
-            <div class="form-group">
-                <label>Username <span class="usernameError"></span></label>
-                <input type="text" class="form-control username" name="username" required="required">
-            </div>
-            <div class="form-group">
-                <label>Email Address <span class="Error emailError"></span></label>
-                <input type="email" class="form-control email" name="email" required="required">
-            </div>
-            <div class="form-group">
-                <label>Password <span class="Error passwordError"></span></label>
-                <input type="password" class="form-control password" name="password" required="required">
-            </div>
-            <div class="form-group">
-                <label>Confirm Password <span class="Error confirm_passwordError"></span></span></label>
-                <input type="password" class="form-control confirm_password" name="confirm_password" required="required">
-            </div>
-            <div class="form-group">
-                    
-                <button type="button" class="btn btn-primary btn-block btn-lg signUpBtn">Sign Up</button>
-            </div>
-            <div class="text-center">Already have an account? <span class="loginRedirect" >Login here</span></div>
-        </form>
-        </div>
-    </div>	
-<div class="deleteModal hide">
-    <div class="deleteModalContainer">
-        <div class="formUpdate">
-            <form  class="modal-form">
-                <label for="DeleteName" >Student Name</label>
-                <div class="input-group form-group">
-                   <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
-                    </span>
-                    <input type="text" class="form-control DeleteName" id="DeleteName" placeholder="Student Name" readonly>
-                </div>
-                <label for="DeleteCourse" >Course</label>
-                <div class="input-group form-group">
-                   <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-list-alt"></span>
-                    </span>
-                    <input type="text" class="form-control DeleteCourse" id="DeleteCourse" placeholder="Course" readonly>
-                </div>
-                <label for="DeleteGrade" >Grade</label>
-                <div class="input-group form-group">
-                   <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-education"></span>
-                    </span>
-                    <input type="text" class="form-control DeleteGrade" id="DeleteGrade" placeholder="Grade" readonly>
-                </div>  
-                 <p>Are you sure you want to delete?</p>
-                <button type="button" class="DeleteAjax btn btn-danger">Confirm</button>
-                <button type="button" class="btn btn-default cancelDelete">Cancel</button>
-            </form>
-            
-        </div>
-    </div>
-</div>
 <div class="container">
-    <div class="modal hide">
-                <div class="modal-container">
-                    <div class="formUpdate">
-                        <form  class="modal-form">
-                            <label for="updateName" >Student Name</label>
-                            <div class="input-group form-group">
-                               <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                </span>
-                                <input type="text" class="form-control updateName" id="updateName" placeholder="Student Name">
-                            </div>
-                            <label for="updateCourse" >Course</label>
-                            <div class="input-group form-group">
-                               <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-list-alt"></span>
-                                </span>
-                                <input type="text" class="form-control updateCourse" id="updateCourse" placeholder="Course">
-                            </div>
-                            <label for="updateGrade" >Grade</label>
-                            <div class="input-group form-group">
-                               <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-education"></span>
-                                </span>
-                                <input type="number" class="form-control updateGrade" id="updateGrade" placeholder="Grade">
-                            </div>  
-                    
-                            <button type="button" class="updateAjax btn btn-success">Submit</button>
-                            <button type="button" class="btn btn-default cancelModal">Cancel</button>
-                        </form>
-                        
-                    </div>
-                </div>
-    </div>
-    <div class="">
-        <!-- only show this element when it isnt on mobile -->
-        <h1 class="hidden-xs hidden-sm page-header ">Student Grade Table
-            <button type="button" class=" login col-md-offset-5 btn btn-primary">Login</button>
-            <button type="button" class=" signUp btn btn-success">Sign Up</button>
-            <small class="hidden-xs hidden-sm col-md-offset-1">Grade Average : <span class="avgGrade label label-default">0</span></small>
+    <div class="col-xs-12 col-md-12 page-header">
+        <!-- only show this element when the isnt on mobile -->
+        <h1 class="hidden-xs">Student Grade Table
+            <small class="pull-right">Grade Average : <span class="avgGrade label label-default">0</span></small>
         </h1>
-        
         <!-- only show this element when the user gets to a mobile version -->
-        <h3 class="visible-xs visible-sm col-xs-12 page-header ">Student Grade Table
-                <button type="button" class="login userBtn col-xs-offset-3 btn btn-primary">Login</button>
-                <button type="button" class="signUp userBtn  btn btn-success">Sign Up</button>
-            <small class="visible-xs visible-sm col-xs-12">Grade Average : <span class="avgGrade label label-default">0</span></small>
+        <h3 class="hidden-sm hidden-md hidden-lg hidden-xl">Student Grade Table
+            <small class="pull-right">Grade Average : <span class="avgGrade label label-default">0</span></small>
         </h3>
     </div>
-    <div class="student-add-form col-md-4 pull-right">
-        <h4 class="col-md-offset- 8">Add Student</h4>
-        <div class="input-group form-group">
+    <div class="student-add-form col-xs-12 col-sm-3 pull-right">
+        <h4>Add Student</h4>
+        <div class="input-group form-group" id="nameInputGroup">
             <span class="input-group-addon">
                 <span class="glyphicon glyphicon-user"></span>
             </span>
-            <input type="text" class="form-control" name="studentName" id="studentName" placeholder="Student Name">
+            <input type="text" class="form-control form-success" name="studentName" id="studentName" placeholder="Name">
         </div>
-        <div class="input-group form-group">
+        <div class="input-group form-group" id="courseInputGroup">
             <span class="input-group-addon">
                 <span class="glyphicon glyphicon-list-alt"></span>
             </span>
             <input type="text" class="form-control" name="course" id="course"
-                   placeholder="Student Course">
+                   placeholder="Course">
         </div>
-        <div class="input-group form-group">
+        <div class="input-group form-group" id="gradeInputGroup">
             <span class="input-group-addon">
                 <span class="glyphicon glyphicon-education"></span>
             </span>
             <input type="number" class="form-control" name="studentGrade" id="studentGrade"
-                   placeholder="Student Grade">
+                   placeholder="Grade" onchange="setTwoNumberDecimal(this)" min=0 max=100>
         </div>
-        <button type="button" class="btn btn-success" id="add" onclick="">Add</button>
-        <button type="button" class="btn btn-default" id="cancel" onclick="">Cancel</button>
-        
+        <button type="button" class="add_button btn btn-success" onclick="">Add</button>
+        <button type="button" class="cancel_button btn btn-default" onclick="">Cancel</button>
     </div>
-    <div class="student-list-container col-md-8 col-xs-12">
+    <div class='gap col-xs-12 hidden-sm hidden-md hidden-lg'></div>
+    <div class="student-list-container container col-xs-12 col-sm-9">
         <table class="student-list table">
             <thead>
             <tr>
-                <th>Student Name</th>
-                <th>Student Course</th>
-                <th>Student Grade</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Grade</th>
                 <th>Operations</th>
             </tr>
             </thead>
             <tbody>
+                <!--New rows get added here.-->
             </tbody>
         </table>
     </div>
 </div>
 </body>
 </html>
+
